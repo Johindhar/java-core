@@ -7,20 +7,18 @@ public class PatternOne {
     public static void main(String[] args) {
 
         System.out.println("Enter the Row :");
-        Scanner sc = new Scanner(System.in);
-        int numberOfRows = sc.nextInt();
-        sc.close();
+        Scanner scanner = new Scanner(System.in);
+        int numberOfRows = scanner.nextInt();
+        scanner.close();
 
-        int m = numberOfRows;
-        for(int i = 1; i<=numberOfRows;i++){
+        int numberOfSpaces = numberOfRows;
+        for (int rows = 1; rows <= numberOfRows; rows++) {
 
-            for (int j = m-1 ; j>0; j--){
-
+            for (int spaces = numberOfSpaces - 1; spaces > 0; spaces--) {
                 System.out.print(" ");
             }
-            m = m-1;
-            for(int k = 1; k <= 2*i - 1; k++)
-            {
+            numberOfSpaces--;
+            for (int stars = 1; stars <= 2 * rows - 1; stars++) {
                 System.out.print("*");
             }
             System.out.println("");
